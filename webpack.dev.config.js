@@ -3,9 +3,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: { 
+        'kiwi': "./src/kiwi.js",
+        'hello-world': "./src/hello-world.js",
+        'home': "./src/index.js",
+        },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, './dist'),
         publicPath: ''
     },
@@ -13,7 +17,9 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         index: 'index.html',
-        port: 9000
+        port: 9000,
+        open: true,
+        writeToDisk: true
     },
     module: {
         rules: [
@@ -54,11 +60,33 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: [
+                "**/*",
+                path.join(process.cwd(), "build/**/*")
+            ]
+        }),
         new HtmlWebpackPlugin({
-            title: 'Hello world',
-            template: 'src/index.hbs',
-            description: 'some description'
+            filename: "kiwi.html",
+            chunks: ["kiwi"],
+            title: "Kiwi",
+            description: "Kiwi",
+            template: "src/page-template.hbs"
+        }),
+            new HtmlWebpackPlugin({
+            filename: "hello-world.html",
+            chunks: ["hello-world"],
+            title: "Kiwi",
+            description: "Hello",
+            template: "src/page-template.hbs"
+        }),
+            new HtmlWebpackPlugin({
+            filename: "index.html",
+            chunks: ["home"],
+            title: "Home",
+            description: "Home",
+            template: "src/page-template.hbs"
         })
+
     ]
 };
