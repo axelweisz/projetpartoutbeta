@@ -4,9 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: { 
-        'kiwi': "./src/kiwi.js",
-        'hello-world': "./src/hello-world.js",
+        // 'kiwi': "./src/kiwi.js",
+        // 'hello-world': "./src/hello-world.js",
         'home': "./src/index.js",
+        'sketches': "./src/sketches.js"
         },
     output: {
         filename: '[name].js',
@@ -66,26 +67,33 @@ module.exports = {
                 path.join(process.cwd(), "build/**/*")
             ]
         }),
-        new HtmlWebpackPlugin({
-            filename: "kiwi.html",
-            chunks: ["kiwi"],
-            title: "Kiwi",
-            description: "Kiwi",
-            template: "src/page-template.hbs"
-        }),
-            new HtmlWebpackPlugin({
-            filename: "hello-world.html",
-            chunks: ["hello-world"],
-            title: "Kiwi",
-            description: "Hello",
-            template: "src/page-template.hbs"
-        }),
+        // new HtmlWebpackPlugin({
+        //     filename: "kiwi.html",
+        //     chunks: ["kiwi"],
+        //     title: "Kiwi",
+        //     description: "Kiwi",
+        //     template: "src/view-templates/page-template.hbs"
+        // }),
+        //     new HtmlWebpackPlugin({
+        //     filename: "hello-world.html",
+        //     chunks: ["hello-world"],
+        //     title: "Kiwi",
+        //     description: "Hello",
+        //     template: "src/view-templates/page-template.hbs"
+        // }),
             new HtmlWebpackPlugin({
             filename: "index.html",
             chunks: ["home"],
             title: "Home",
             description: "Home",
-            template: "src/page-template.hbs"
+            template: "src/view-templates/page-template.hbs"
+        }),
+            new HtmlWebpackPlugin({
+            filename: "sketches.html",
+            chunks: ["sketches"],
+            title: "Sketches",
+            description: "Sketches",
+            template: "src/view-templates/page-sketches.hbs"
         })
 
     ]

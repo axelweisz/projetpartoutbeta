@@ -8,6 +8,7 @@ module.exports = {
         'hello-world': './src/hello-world.js',
         'kiwi': './src/kiwi.js',
         'home': './src/index.js',
+        'sketches': "./src/sketches.js"
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -63,21 +64,28 @@ module.exports = {
             chunks: ['hello-world'],
             title: 'Hello world',
             description: 'some description',
-            template: 'src/page-template.hbs'
+            template: 'src/view-templates/page-template.hbs'
         }),
         new HtmlWebpackPlugin({
             filename: 'kiwi.html',
             chunks: ['kiwi'],
             title: 'Kiwi',
             description: 'Kiwi',
-            template: 'src/page-template.hbs'
+            template: 'src/view-templates/page-template.hbs'
         }),
           new HtmlWebpackPlugin({
             filename: 'index.html',
             chunks: ['home'],
             title: 'Home',
             description: 'Home',
-            template: 'src/page-home.hbs'
+            template: 'src/view-templates/page-home.hbs'
+        }),
+            new HtmlWebpackPlugin({
+            filename: "sketches.html",
+            chunks: ["sketches"],
+            title: "Sketches",
+            description: "Sketches",
+            template: "src/view-templates/page-template.hbs"
         })
     ]
 };
