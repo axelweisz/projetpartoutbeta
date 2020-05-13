@@ -5,21 +5,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        'hello-world': './src/hello-world.js',
-        'kiwi': './src/kiwi.js',
-        'home': './src/index.js',
-        'sketches': "./src/sketches.js"
+       'home':  './src/index.js',
+                'sketches': "./src/sketches.js",
+                'apropos': "./src/apropos.js"
     },
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: ''
+            filename: '[name].[contenthash].js',
+            path: path.resolve(__dirname, './dist'),
+            publicPath: ''
     },
     mode: 'production',
     module: {
         rules: [
             {
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpg|jpeg|gif)$/,
                 use: [
                     'file-loader'
                 ]
@@ -60,32 +59,32 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'hello-world.html',
-            chunks: ['hello-world'],
-            title: 'Hello world',
-            description: 'some description',
-            template: 'src/view-templates/page-template.hbs'
+             filename: "index.html",
+            chunks: ["home"],
+            title: "Home",
+            description: "Home",
+            template: "src/view-templates/page-template.hbs"
         }),
         new HtmlWebpackPlugin({
-            filename: 'kiwi.html',
-            chunks: ['kiwi'],
-            title: 'Kiwi',
-            description: 'Kiwi',
-            template: 'src/view-templates/page-template.hbs'
-        }),
-          new HtmlWebpackPlugin({
-            filename: 'index.html',
-            chunks: ['home'],
-            title: 'Home',
-            description: 'Home',
-            template: 'src/view-templates/page-home.hbs'
-        }),
-            new HtmlWebpackPlugin({
             filename: "sketches.html",
             chunks: ["sketches"],
             title: "Sketches",
             description: "Sketches",
             template: "src/view-templates/page-template.hbs"
-        })
+        }),
+        // new HtmlWebpackPlugin({
+        //     filename: 'kiwi.html',
+        //     chunks: ['kiwi'],
+        //     title: 'Kiwi',
+        //     description: 'Kiwi',
+        //     template: 'src/view-templates/page-template.hbs'
+        // }),
+        new HtmlWebpackPlugin({
+            filename: "apropos.html",
+            chunks: ["apropos"],
+            title: "À Propos",
+            description: "Page avec le resumé du projet",
+            template: "src/view-templates/page-template.hbs"
+        })    
     ]
 };

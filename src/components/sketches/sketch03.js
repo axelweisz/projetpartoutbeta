@@ -1,4 +1,4 @@
-export default function sketch3(data) {
+export default function sketch03(data) {
       
         let sk = (s) => {
             //local  vars
@@ -17,7 +17,7 @@ export default function sketch3(data) {
             }
 
             s.setup = () => {
-                canvas =  s.createCanvas(width, width);
+                canvas =  s.createCanvas(width, height);
                 canvas.position(0, 0);
                 canvas.style('z-index', '-1');
                 s.pixelDensity(s.displayDensity());

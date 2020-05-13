@@ -1,3 +1,8 @@
+import './styles.scss'
+import Apropos from './components/apropos/aprop-render.js';
+
+const aProposPg = new Apropos;
+aProposPg.render();
 
 
 

@@ -1,29 +1,20 @@
+import './styles.scss'
 import './components/sketches/sketches.scss'
 import p5 from 'p5';
 import './components/sketches/sketch01.js'
+import { populateMenu } from './components/sketches/sketches-helpers.js'
 
 let numOfSk = 3;
-let randomSymbolInt = 0;
 let currSketch;
-let contSk  = window.document.getElementById('sketchDiv');
-let menuDiv = window.document.getElementById('menuDiv');
+let skDiv  = window.document.getElementById('sketchDiv');
 let imports = [];
-let symbArray = [];
+let clickables = [];
+
+
 
 //create the sketch navigation menu
-for(let i = 0; i< numOfSk; i++){
-    var line = document.createElement('div');
-    randomSymbolInt = Math.floor(Math.random() * 10);
-    if(symbArray.includes(randomSymbolInt))
-        randomSymbolInt = Math.floor(Math.random() * 10);
-    line.innerHTML = `&#973${randomSymbolInt}`;
-    line.id = `sk0${i+1}`;
-    line.className = "meni";
-    menuDiv.append(line);
-    symbArray.push(randomSymbolInt);
-
-}
-
+clickables = populateMenu(numOfSk);
+ 
 
 let sketch1 =  import('./components/sketches/sketch01.js')
                 .then(_module => {
@@ -35,5 +26,33 @@ let sketch1 =  import('./components/sketches/sketch01.js')
                     }
                     let sk01Var = _module.default(winDimensions);
                     //we do this just because this is the first
-                    currSketch = new p5(sk01Var, contSk);
+                    currSketch = new p5(sk01Var, skDiv);
                 });
+
+// loop to import rest of sketches (we import the modules)
+for(let i=2; i<=numOfSk; i++){
+        let sktch = import(`./components/sketches/sketch0${i}.js`)
+                    .then(_module => { imports.push(_module) })
+}
+
+// set the click events in each item of the menu
+for(let i= 0; i< numOfSk; i++){
+        clickables[i].addEventListener('click', event => {
+                                                let winDimensions = {
+                                                        "width":window.innerWidth,
+                                                        "height":window.innerHeight
+                                                }
+                                            naviga(imports[i].default(winDimensions));
+                                        })
+}
+
+
+
+//navigation
+function naviga(_skVar){
+                        currSketch.remove();
+                        currSketch = null;
+                        if(_skVar == "sk07")
+                            console.log(_skaVar);
+                        currSketch = new p5(_skVar, skDiv);
+}

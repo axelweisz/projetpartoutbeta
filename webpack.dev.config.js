@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
                 entry: { 
-                    //'kiwi': "./src/kiwi.js",
                     'home': "./src/index.js",
                     'sketches': "./src/sketches.js",
                     'apropos': "./src/apropos.js"
