@@ -1,7 +1,58 @@
-.nav {
-    background-color: greenyellow;
+#topnavbar {
+  text-align: center;
 }
 
-.lnk{
-    background-color: hotpink;
+.topnav {
+  margin-top: 25px;
+  display: inline-block;
+  overflow: hidden;
+  a {
+    float: left;
+    display: block;
+    color: rgb(110, 40, 22);
+    text-align: center;
+    margin-top: 8px;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+  a:hover {
+    color: rgba(201, 61, 26, 0.897);
+  }
+  a.active {
+    color: rgb(168, 65, 39);
+  }
+  //hide toggle btn
+  .icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #topnavbar {
+    text-align: right;
+  }
+
+  .topnav a {
+    display: none;
+    //show btn
+    &.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  .topnav.responsive {
+    display: flow-root;
+    a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
 }

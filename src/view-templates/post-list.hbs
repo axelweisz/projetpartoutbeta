@@ -1,3 +1,10 @@
-<h1>Ici va la liste de posts du journal de bord</h1>
+<div class="jdb-head">
+    <h1 class="jdb-titre"> {{jdbtitre}} </h1>
+    <h3><b> {{jdbhead}} </b> </h3>
+</div>
 
-{{> post }}
+<div class="jdb-body">
+    {{#each posts}}
+    {{> post}}
+    {{/each}}
+</div>

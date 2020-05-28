@@ -1,3 +1,12 @@
-<h2>Ceci est un post</h2>
-<h2>Ceci est un post1</h2>
-<h2>Ceci est un post2</h2>
+<div class="card">
+    {{!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> --}}
+    <div class="container">
+        <h2><b>{{title}}</b></h2>
+        <p>
+            {{#if synopsis}}
+            {{synopsis}}
+            {{else}}
+            No synopsis.
+            {{/if}}
+        </p>
+    </div>

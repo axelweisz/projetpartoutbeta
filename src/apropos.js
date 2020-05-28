@@ -8,3 +8,5 @@ topnavbar.render("aprop");
 //page à propos
 const aProposPg = new Apropos();
 aProposPg.render();
+
+// npm install --save-dev @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons

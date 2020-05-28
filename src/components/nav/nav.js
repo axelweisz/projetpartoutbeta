@@ -1,4 +1,9 @@
 import "./nav.scss";
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import { faBars } from "@fortawesome/free-solid-svg-icons/";
+
+library.add(faBars);
+dom.watch();
 
 class Nav {
   render(pg) {

@@ -15,7 +15,7 @@ export default function sketch2(data) {
     s.windowResized = () => {
       width = s.windowWidth;
       height = s.windowHeight;
-      s.resizeCanvas(width, height);
+      s.resizeCanvas(width, height, s.WEBGL);
     };
 
     s.preload = () => {
@@ -38,7 +38,7 @@ export default function sketch2(data) {
     };
 
     s.draw = () => {
-      s.background(0, 0, 0);
+      s.background(255, 0, 0);
       s.orbitControl();
       for (let i = 0; i < str_arr.length; i++) {
         str_arr[i].update();
