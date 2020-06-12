@@ -1,8 +1,16 @@
 .card {
-  display: inline-block;
+  display: block;
+  padding-top: 35px;
+  border-bottom: 3px;
+  border-bottom-style: inset;
+  border-bottom-color: rgba(215, 215, 215, 0.7);
 }
 
 .card:hover {
+}
+
+.card img {
+  width: 50%;
 }
 
 .container {

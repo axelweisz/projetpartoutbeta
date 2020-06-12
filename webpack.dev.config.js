@@ -24,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         use: {
           loader: "file-loader",
           options: {
@@ -62,9 +62,9 @@ module.exports = {
           options: {
             name: "[name].[ext]",
             outputPath: "media/fonts",
-          }
-        }
-      }
+          },
+        },
+      },
     ],
   },
   plugins: [

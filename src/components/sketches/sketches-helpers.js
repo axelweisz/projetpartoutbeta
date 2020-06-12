@@ -22,6 +22,7 @@ export function populateMenu(numOfSk) {
     symbArray.push(randomSymbolInt);
     clickablez.push(line);
   }
+
   return clickablez;
 }
 
