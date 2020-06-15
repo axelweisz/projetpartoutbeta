@@ -5,11 +5,13 @@
     <div class="container">
         <h2><b>{{title}}</b></h2>
         <p>
-            {{#if synopsis}}
-            {{synopsis}}
-            {{else}}
-            No synopsis.
-            {{/if}}
+            <a href="/details.html?postid={{postId}}">
+                {{#if resume}}
+                {{resume}}
+                {{else}}
+                No synopsis.
+                {{/if}}
+            </a>
         </p>
     </div>
 </div>

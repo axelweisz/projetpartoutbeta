@@ -1,7 +1,7 @@
 import "./home.scss";
 import "./post.scss";
 import "./post-list.scss";
-import data from "./posts.json";
+import data from "../posts.json";
 import "../../media/img/borges.svg";
 
 let postlist = require("../../view-templates/post-list.hbs");

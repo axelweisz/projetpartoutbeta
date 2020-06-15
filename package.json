@@ -4,9 +4,9 @@
   "description": "This is a Readme file.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack --config webpack.production.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js --hot"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +19,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "clean-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
@@ -36,6 +36,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.0",
-    "p5": "^1.0.0"
+    "p5": "^1.0.0",
+    "webpack-merge": "^4.2.2"
   }
 }

@@ -1,32 +1,14 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-  entry: {
-    home: "./src/index.js",
-    sketches: "./src/sketches.js",
-    apropos: "./src/apropos.js",
-  },
-  output: {
-    filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "",
-  },
+const merge = require("webpack-merge");
+const commonConfig = require("./webpack.common.config");
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = merge(commonConfig, {
   mode: "production",
   module: {
     rules: [
-      {
-        test: /\.(png|jpg|jpeg|gif)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]",
-            outputPath: "media/img",
-          },
-        },
-      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -35,57 +17,11 @@ module.exports = {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["stage-0"],
-          },
-        },
-      },
-      {
-        test: /\.hbs$/,
-        use: ["handlebars-loader"],
-      },
-      {
-        test: /\.(otf|ttf)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[name].[ext]",
-            outputPath: "media/fonts",
-          },
-        },
-      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      chunks: ["home"],
-      title: "Home",
-      description: "Home",
-      template: "src/view-templates/page-template.hbs",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "sketches.html",
-      chunks: ["sketches"],
-      title: "Sketches",
-      description: "Sketches",
-      template: "src/view-templates/page-sketches.hbs",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "apropos.html",
-      chunks: ["apropos"],
-      title: "À Propos",
-      description: "Page avec le resumé du projet",
-      template: "src/view-templates/page-template.hbs",
-    }),
   ],
-};
+});

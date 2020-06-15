@@ -27,9 +27,17 @@
   margin: 5px 35px;
   padding: 0 50px;
 
-  p {
+  a {
     color: rgba(32, 32, 32, 0.9);
   }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .container {

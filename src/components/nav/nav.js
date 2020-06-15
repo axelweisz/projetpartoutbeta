@@ -10,11 +10,10 @@ class Nav {
     let nave = require("../../view-templates/nav.hbs");
     var div = document.getElementById("topnavbar");
     div.innerHTML = nave();
-
     //removing active from all first
     let lnks = document.querySelectorAll(".test");
     for (let i = 0; i < lnks.length; i++) {
-      console.log(lnks[i]);
+      // console.log(lnks[i]);
       lnks[i].classList.remove("active");
     }
     //settin the active classe to the corresponding link

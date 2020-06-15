@@ -1,18 +1,26 @@
 {
-  "jdbtitre": "Bienvenu au site du projet P.AR-T.OUT.!!",
+  "jdbtitre": "Bienvenu au site du projet P.AR-T.OUT.!! Testem!!!",
   "jdbhead": "Ici vous pouvez accompagner le deroulement de ce projet de recherche. Fabio vel iudice vincam, sunt in culpa qui officia. Inmensae subtilitatis, obscuris et malesuada fames. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Pellentesque habitant morbi tristique senectus et netus. Phasellus laoreet lorem vel dolor tempus vehicula. ",
   "posts": [
     {
+      "postId": "p-t-01",
       "title": "Me non paenitet nullum festiviorem excogitasse.",
       "img": "https://images.gr-assets.com/authors/1537559279p8/500.jpg",
+      "resume": "Comme premier post, il serait très difficile de ne pas faire référence à Jorge Luis Borges. L’écrivant argentin, comme moi, ayant passé une bonne part de sa vie en exile, comme moi, à part de m’avoir toujours fasciné avec ses comptes et son érudition et sa philosophie de l’écriture, Borges est fréquemment cité par les auteurs de différents ...",
       "synopsis": "Comme premier post, il serait très difficile de ne pas faire référence à Jorge Luis Borges. L’écrivant argentin, comme moi, ayant passé une bonne part de sa vie en exile, comme moi, à part de m’avoir toujours fasciné avec ses comptes et son érudition et sa philosophie de l’écriture, Borges est fréquemment cité par les auteurs de différents champs d’études des humanités et aussi un inspirateur des scientistes de divers domaines, allant de la physique à la mathématique. Attendez vous donc, sinon à un projet borgéan, à un projet avec beaucoup de références et d’inspiration tant de ses œuvres, tant que de ses idées sur la littérature, sur la poésie, sur le langage et, pourquoi pas, sur le temps et sur la vie humaine. D’abord je trouve qu’il serait intéressant de jeter un coup d’œil aux idées de Borges sur la poésie, peut-être c’est là où on va se concentrer par rapport à notre projet et ça par plusieurs raisons, dont on reviendra au long du projet. À part de ses nombreux textes parlant de la poésie et des poètes, Borges a donné quelques conférences sur le sujet, d’entre lesquelles on voudrait remarquer celles donnés à l’Université de Harvard en 1967 dont les enregistrements sont disponibles en ligne, bien comme leurs transcriptions."
     },
     {
+      "postId": "p-t-02",
       "title": "Tityre, tu dolor.",
+      "resume": "Ambitioni dedisse scripsisse iudicaretur. Quae vero auctorem tractata ab fiducia dicuntur...",
       "synopsis": "Ambitioni dedisse scripsisse iudicaretur. Quae vero auctorem tractata ab fiducia dicuntur. Curabitur est gravida et libero vitae dictum. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ab illo tempore, ab est sed immemorabili. Quam diu etiam furor iste tuus nos eludet? Cras mattis iudicium purus sit amet fermentum. Unam incolunt Belgae, aliam Aquitani, tertiam. Contra legem facit qui id facit quod lex prohibet. Ullamco laboris nisi ut aliquid ex ea commodi consequat. Magna pars studiorum, prodita quaerimus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Excepteur sint obcaecat cupiditat non proident culpa. Ab illo tempore, ab est sed immemorabili."
     },
-    { "title": "Book without synopsis" },
     {
+      "postId": "p-t-03",
+      "title": "Book without synopsis"
+    },
+    {
+      "postId": "p-t-045",
       "title": "Book with synopsis",
       "img": "../../media/img/borges.svg",
       "synopsis": "whatever"
