@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url(../../media/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Light;
+  src: url(../../media/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: editorialNewRegular;
+  src: url(../../media/fonts/EditorialNew-Regular.otf);
+}
+
+body {
+  background-color: white;
+  text-align: center;
+  font-size: 1.15rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.wrapper {
+  margin-top: 75px;
+  text-align: center;
+  line-height: 1.8rem;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: editorialNewRegular;
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: editorialNewRegular;
+  text-align: justify;
+  padding: 5px 50px;
+  line-height: 2em;
+}
+
+.pcontent {
+  width: 80%;
+  display: inline-block;
+}
+
+img {
+  float: right;
+  margin-left: 25px;
+  padding: 5px;
+  border: solid 3px grey;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: 25px;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

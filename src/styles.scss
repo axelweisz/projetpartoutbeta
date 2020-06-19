@@ -1,17 +1,12 @@
 @font-face {
-  font-family: spaceGrotesk;
-  src: url(./media/fonts/SpaceGrotesk-Regular.otf);
-}
-
-@font-face {
-  font-family: alegreya;
-  src: url(./media/fonts/Alegreya-Regular.ttf);
+  font-family: editorialNewRegular;
+  src: url(./media/fonts/EditorialNew-Regular.otf);
 }
 
 body {
   background-color: white;
   text-align: center;
-  font-family: alegreya;
+  font-family: editorialNewRegular;
   font-size: 1.15rem;
   padding: 0;
   margin: 0;

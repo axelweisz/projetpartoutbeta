@@ -1,5 +1,6 @@
 import data from "../posts.json";
 import Nav from "../nav/nav.js";
+import "./single-post.scss";
 const topnavbar = new Nav();
 topnavbar.render("aprop");
 

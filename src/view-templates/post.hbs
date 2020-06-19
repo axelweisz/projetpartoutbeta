@@ -1,17 +1,25 @@
 <div class="card">
-    {{#if img}}
-    <img src={{img}} alt="Avatar">
-    {{/if}}
     <div class="container">
-        <h2><b>{{title}}</b></h2>
-        <p>
-            <a href="/details.html?postid={{postId}}">
-                {{#if resume}}
-                {{resume}}
-                {{else}}
-                No synopsis.
-                {{/if}}
-            </a>
-        </p>
+        <div id="thumb">
+            {{#if thumb}}
+            <img src={{thumb}}>
+            {{else}}
+            <h3>{{title}}</h3>
+            {{/if}}
+        </div>
+        <div>
+            <p>
+                <a href="/details.html?postid={{postId}}">
+                    {{#if thumb}}
+                    <b>{{title}}</b>
+                    {{/if}}
+                    {{#if resume}}
+                    {{resume}}
+                    {{else}}
+                    No synopsis.
+                    {{/if}}
+                </a>
+            </p>
+        </div>
     </div>
 </div>

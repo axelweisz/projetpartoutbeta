@@ -3,6 +3,7 @@ import "./post.scss";
 import "./post-list.scss";
 import data from "../posts.json";
 import "../../media/img/borges.svg";
+import "../../media/img/howlThumb.png";
 
 let postlist = require("../../view-templates/post-list.hbs");
 
